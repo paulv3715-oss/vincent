@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Motor Parts Shop</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+            background: #f4f4f4; 
+        }
+        
+        nav { 
+            background: black; 
+            padding: 18px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        nav a, nav button { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 16px;
+            font-family: inherit;
+            padding: 8px 12px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        /* Red Logout Button */
+        .logout-btn {
+            background-color: #e74c3c !important;
+            border-radius: 6px;
+            padding: 8px 16px !important;
+            margin-left: 15px;
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b !important;
+            color: white !important;
+        }
+
+        /* Container with background overlay matching Home & About pages */
+        .contact { 
+            min-height: calc(100vh - 60px); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                        url('images.jpg') no-repeat center center/cover;
+            color: white; 
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Glassmorphism content box */
+        .content-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .content-container h1 { 
+            font-size: 38px; 
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .content-container p {
+            color: #e0e0e0;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        /* Form Controls Styling */
+        form { 
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #ddd;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 15px;
+            box-sizing: border-box;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #bbb;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        textarea { 
+            height: 120px; 
+            resize: vertical;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            padding: 12px; 
+            background: #27ae60;
+            color: white; 
+            border: none; 
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s ease, transform 0.1s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #219653;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+    <nav> 
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Product.html">Product</a>
+        <a href="Contact.html">Contact</a>   
+        <a href="Films.html">Videos</a>
+        
+        <!-- Logout button that returns to Login.html -->
+        <button type="button" class="logout-btn" onclick="handleLogout()">Logout</button>
+    </nav>
+
+    <div class="contact">
+        <div class="content-container">
+            <h1>?? Contact Us</h1>
+            <p>Have questions about motor parts? Send us a message!</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone" placeholder="09055435628" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="paulv@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Type your inquiry or order details here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleLogout() {
+            // Redirects to Login.html on click
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>

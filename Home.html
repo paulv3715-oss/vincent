@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+            background: #f4f4f4; 
+        }
+        
+        nav { 
+            background: black; 
+            padding: 18px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        nav a, nav button { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 16px;
+            font-family: inherit;
+            padding: 8px 12px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        /* Red Logout Action Button */
+        .logout-btn {
+            background-color: #e74c3c !important;
+            border-radius: 6px;
+            padding: 8px 16px !important;
+            margin-left: 15px;
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b !important;
+            color: white !important;
+        }
+
+        /* Container styling */
+        .home { 
+            min-height: calc(100vh - 60px); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url("images.jpg") no-repeat center center/cover;
+            color: white; 
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Glassmorphism content box */
+        .content-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 800px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .home h1 { 
+            font-size: 40px; 
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Featured Content Image Styling */
+        .feature-image {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .home p { 
+            font-size: 17px; 
+            line-height: 1.6;
+            margin: 0;
+            color: #e0e0e0;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="Home.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Product.html">Product</a>
+    <a href="Contact.html">Contact</a>
+    <a href="Films.html">Videos</a>
+    
+    <!-- Logout button that returns to Login.html -->
+    <button type="button" class="logout-btn" onclick="handleLogout()">Logout</button>
+</nav>
+
+<div class="home">
+    <div class="content-container"> 
+        <h1> Welcome To My Shop!</h1>
+        
+        <!-- Featured Image representing the shop content -->
+        <img src="paul.jpg" alt="Motorcycle Parts Showcase" class="feature-image">
+
+        <p>
+            Welcome to our Motor Parts Shop, your trusted place for motorcycle parts, accessories, and other motorcycle products. Our website is created to help motorcycle riders easily find the products they need for their motorcycles. We offer different kinds of quality parts and accessories that can be useful for maintenance, repair, and customization.
+            <br><br>
+            Our goal is to provide affordable and reliable products while giving our customers a simple and convenient way to explore our available items. Whether you are looking for replacement parts, motorcycle accessories, or products for your motorcycle upgrade, you can browse our product page to see what we offer.
+            <br><br>
+            Thank you for visiting our website! We hope you find the right products for your motorcycle and have a safe and enjoyable ride. Explore our website and discover the products that are perfect for your needs.
+        </p>
+    </div>
+</div>
+
+<script>
+    function handleLogout() {
+        // Maredirect padulong sa Login.html page
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>

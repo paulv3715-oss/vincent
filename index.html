@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Motor Parts Shop</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("paul.jpg") no-repeat center center/cover;
+        }
+
+        .login-box {
+            width: 360px;
+            padding: 35px 30px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-logo {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #e0e0e0;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            color: white;
+            outline: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        input::placeholder {
+            color: #ccc;
+        }
+
+        input:focus {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: #ffffff;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            margin-top: 10px;
+            background: white;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.1s ease;
+        }
+
+        .submit-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-1px);
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            font-size: 14px;
+            margin-top: 15px;
+            margin-bottom: 0;
+            min-height: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <!-- Shop Logo -->
+        <img src="images.jpg" alt="Logo" class="login-logo">
+        
+        <h1>Member Login</h1>
+
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required placeholder="Enter Username">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="Enter Password">
+            </div>
+
+            <button type="submit" class="submit-btn">Log in</button>
+
+            <p id="error-message" class="error-message"></p>
+        </form>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            // Dili i-reload ang page inig submit sa form
+            event.preventDefault();
+
+            const usernameInput = document.getElementById("username").value;
+            const passwordInput = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            // Simple login validation (Username: admin | Password: 0000)
+            if (usernameInput === "admin" && passwordInput === "0000") {
+                // Mo-redirect sa Home.html
+                window.location.href = "Home.html";
+            } else {
+                errorMessage.textContent = "Invalid Username or Password!";
+            }
+        }
+    </script>
+
+</body>
+</html>

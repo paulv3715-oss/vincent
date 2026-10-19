@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Motor Parts Shop</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+            background: #f4f4f4; 
+        }
+        
+        nav { 
+            background: black; 
+            padding: 18px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        nav a, nav button { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 16px;
+            font-family: inherit;
+            padding: 8px 12px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        /* Red Logout Button */
+        .logout-btn {
+            background-color: #e74c3c !important;
+            border-radius: 6px;
+            padding: 8px 16px !important;
+            margin-left: 15px;
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b !important;
+            color: white !important;
+        }
+
+        /* Container with background image and overlay */
+        .home { 
+            min-height: calc(100vh - 60px); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('images.jpg') no-repeat center center/cover;
+            color: white; 
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Glassmorphism content box */
+        .content-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 800px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main Heading */
+        .home h1 { 
+            font-size: 45px; 
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Paragraph text adjustments */
+        .home p { 
+            font-size: 17px; 
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+            text-align: justify;
+        }
+
+        .home p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Featured Image Styling */
+        .about-image-container {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .about-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .about-image-container:hover .about-image {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+
+    <nav> 
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Product.html">Product</a>
+        <a href="Contact.html">Contact</a>   
+        <a href="Films.html">Videos</a>
+        
+        <!-- Logout button that returns to Login.html -->
+        <button type="button" class="logout-btn" onclick="handleLogout()">Logout</button>
+    </nav>
+
+    <div class="home">
+        <div class="content-container"> 
+            <h1>About Us</h1>
+            
+            <!-- Featured Image describing motor parts & accessories -->
+            <div class="about-image-container">
+                <img src="paul.jpg" alt="Motorcycle Parts Showcase" class="about-image">
+            </div>
+
+            <p>Welcome to our Motor Parts Shop! We are a small business website that provides different motorcycle parts, accessories, and other useful products for motorcycle riders. Our website was created to make it easier for customers to explore and learn about different motorcycle products in one place.</p>
+            
+            <p>We believe that having quality and reliable motorcycle parts is important for every rider. That is why we aim to provide products that can help with motorcycle maintenance, repair, replacement, and customization. We want our customers to have a convenient and simple way to find the products they need.</p>
+            
+            <p>Our goal is to provide good products, affordable choices, and helpful service to our customers. We also want to build trust with motorcycle riders by giving clear information about our products.</p>
+            
+            <p>Thank you for visiting our website and supporting our Motor Parts Shop. We hope our website can help you find the right parts and accessories for your motorcycle. Ride safely and enjoy every journey!</p>
+        </div>
+    </div>
+
+    <script>
+        function handleLogout() {
+            // Redirects to Login.html on click
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
